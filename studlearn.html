@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StuuLearnn</title>
+    <style>
+        :root {
+            --lavender: #AC92EC;
+            --grapefruit: #ED5565;
+            --bittersweet: #FC6E51;
+            --sunflower: #FFCE54;
+            --grass: #A0D468;
+            --mint: #48CFAD;
+            --aqua: #4FC1E9;
+            --bluejeans: #5D9CEC;
+            --pinkrose: #EC87C0;
+            --lightgray: #F5F7FA;
+            --mediumgray: #CCD1D9;
+            --darkgray: #656D78;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(to bottom right, var(--lightgray), var(--lavender));
+        }
+
+        header {
+            background: linear-gradient(to right, var(--bluejeans), var(--pinkrose));
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        nav {
+            background-color: var(--darkgray);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: var(--mediumgray);
+            color: var(--darkgray);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+
+        .card-content h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: var(--darkgray);
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin-bottom: 0.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to StuuLearnn</h1>
+        <p>Your all-in-one solution for books, videos, online tutoring, and AI assistance</p>
+    </header>
+
+    <!-- Navigation with Flexbox -->
+    <nav>
+        <ul>
+            <li><a href="#books">Books & Notes</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#tutors">Tutors</a></li>
+            <li><a href="#ai-assistant">AI Assistance</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content with CSS Grid for Auto Layout -->
+    <div class="container">
+        <div id="books" class="card">
+            <img src="https://via.placeholder.com/400x200" alt="Books & Notes">
+            <div class="card-content">
+                <h3 style="color: var(--grapefruit);">Books & Notes</h3>
+                <p>Access a comprehensive collection of textbooks, study notes, and reading materials across subjects. Learn at your pace with trusted content.</p>
+            </div>
+        </div>
+
+        <div id="videos" class="card">
+            <img src="https://via.placeholder.com/400x200" alt="Videos">
+            <div class="card-content">
+                <h3 style="color: var(--bittersweet);">Videos</h3>
+                <p>Watch engaging video tutorials and lessons to enhance your learning experience. Visualize complex topics with ease.</p>
+            </div>
+        </div>
+
+        <div id="tutors" class="card">
+            <img src="https://via.placeholder.com/400x200" alt="Tutors">
+            <div class="card-content">
+                <h3 style="color: var(--sunflower);">Tutors</h3>
+                <p>Connect with qualified tutors in real-time for personalized learning and guidance. Get help when you need it most.</p>
+            </div>
+        </div>
+
+        <div id="ai-assistant" class="card">
+            <img src="https://via.placeholder.com/400x200" alt="AI Assistance">
+            <div class="card-content">
+                <h3 style="color: var(--mint);">AI Assistance</h3>
+                <p>Ask our AI-powered assistant for instant answers to your questions. Get smart recommendations based on your learning needs.</p>
+            </div>
+        </div>
+
+        <div id="contact" class="card">
+            <img src="https://via.placeholder.com/400x200" alt="Contact Us">
+            <div class="card-content">
+                <h3 style="color: var(--aqua);">Contact Us</h3>
+                <p>Need help or have any questions? Get in touch with our support team, and we'll assist you as soon as possible.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 StuuLearnn. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
